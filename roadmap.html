@@ -129,6 +129,10 @@ table th{background:var(--card2);color:var(--accent);font-size:12px;}
       <div class="navbtn" data-view="review" onclick="setView('review')">مرور دوره‌ای</div>
       <div class="navbtn" data-view="capstone" onclick="setView('capstone')">آزمون نهایی</div>
     </div>
+    <div class="navbtns" style="margin-bottom:14px;">
+      <div class="navbtn" onclick="exportProgress()" title="دانلود پیشرفت به‌صورت فایل JSON">⬇️ اکسپورت فایل پیشرفت</div>
+      <div class="navbtn" onclick="importProgress()" title="بارگذاری پیشرفت از فایل JSON">⬆️ ایمپورت فایل پیشرفت</div>
+    </div>
     <div class="section-title" style="margin-top:6px;font-size:12px;">فهرست فازها <div class="line"></div></div>
     <div class="phaselist" id="phaseListNav"></div>
   </aside>
@@ -2160,6 +2164,57 @@ function saveProgress() {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(PROGRESS)); } catch(e) { console.error('storage failed', e); }
 }
 let PROGRESS = loadProgress(); // { topicId: {status, note, bookmark, review:{lastDate, nextDate, ease}} }
+
+// ---------- Export / Import progress ----------
+function exportProgress() {
+  const payload = {exportedAt: new Date().toISOString(), version: 1, progress: PROGRESS};
+  const blob = new Blob([JSON.stringify(payload, null, 2)], {type: 'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  const stamp = new Date().toISOString().slice(0,10);
+  a.href = url;
+  a.download = `roadmap-progress-${stamp}.json`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+
+function importProgress() {
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = 'application/json';
+  input.onchange = () => {
+    const file = input.files && input.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      let parsed;
+      try {
+        parsed = JSON.parse(reader.result);
+      } catch(e) {
+        alert('فایل معتبر JSON نیست.');
+        return;
+      }
+      const incoming = (parsed && typeof parsed === 'object' && parsed.progress) ? parsed.progress : parsed;
+      if (!incoming || typeof incoming !== 'object') {
+        alert('ساختار فایل پیشرفت نامعتبر است.');
+        return;
+      }
+      const replace = confirm('برای جایگزینی کامل پیشرفت فعلی با فایل وارد شده OK بزنید؛ برای ادغام (merge) با پیشرفت فعلی Cancel بزنید.');
+      if (replace) {
+        PROGRESS = incoming;
+      } else {
+        PROGRESS = Object.assign({}, PROGRESS, incoming);
+      }
+      saveProgress();
+      render();
+      alert('پیشرفت با موفقیت وارد شد.');
+    };
+    reader.readAsText(file);
+  };
+  input.click();
+}
 
 function getEntry(topicId) {
   if (!PROGRESS[topicId]) PROGRESS[topicId] = {status:'not_started', note:'', bookmark:false, review:null};
