@@ -28,8 +28,8 @@
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | process-vs-thread | Process، Thread و Context Switching | Intermediate | L2+ |
-| concurrency-primitives | Mutex، Semaphore، Race Condition و Deadlock | Advanced | L4+ |
-| virtual-memory | حافظهٔ مجازی، Paging و Page Fault | Advanced | L4+ |
+| concurrency-primitives | Mutex، Semaphore، Race Condition و Deadlock | Advanced | L3+ |
+| virtual-memory | حافظهٔ مجازی، Paging و Page Fault | Advanced | L3+ |
 
 ## p3 (فاز 3) 🐧 لینوکس
 لینوکس در سطح مهندس بک‌اند/SRE حرفه‌ای: shell، پردازش‌ها، شبکه، عیب‌یابی.
@@ -46,7 +46,7 @@
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | py-oop-typing | OOP، Typing و Dataclasses در پایتون | Beginner | L1+ |
-| py-generators-async | Generator، Coroutine و Event Loop | Advanced | L4+ |
+| py-generators-async | Generator، Coroutine و Event Loop | Advanced | L3+ |
 | py-memory-gc | مدیریت حافظه، Reference Counting و Garbage Collector | Expert | L5+ |
 
 ## p5 (فاز 5) 🌳 ساختمان داده
@@ -57,7 +57,7 @@
 | ds-hash-table | Hash Table | Intermediate | L2+ |
 | ds-linear-structures | آرایه، لیست پیوندی، پشته و صف | Beginner | L1+ |
 | ds-trees-heaps | درخت جستجوی دودویی، هیپ و Trie | Intermediate | L2+ |
-| ds-btree | B-Tree و B+Tree | Advanced | L4+ |
+| ds-btree | B-Tree و B+Tree | Advanced | L3+ |
 | ds-lsm-tree | LSM Tree | Expert | L5+ |
 
 ## p6 (فاز 6) 🧮 الگوریتم‌ها
@@ -67,7 +67,7 @@
 |---|---|---|---|
 | algo-complexity | تحلیل پیچیدگی (Big O) | Beginner | L1+ |
 | algo-sorting-recursion | مرتب‌سازی، بازگشت و تقسیم‌وغلبه | Beginner | L1+ |
-| algo-dp-greedy | برنامه‌نویسی پویا و الگوریتم حریصانه | Intermediate | L2+ |
+| algo-dp-greedy | برنامه‌نویسی پویا و الگوریتم حریصانه | Intermediate | L3+ |
 | algo-graph-bfs-dfs | BFS، DFS و کوتاه‌ترین مسیر (Dijkstra) | Intermediate | L2+ |
 
 ## p7 (فاز 7) ➗ ریاضیات مهندسی نرم‌افزار
@@ -84,14 +84,14 @@
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | git-internals | معماری داخلی Git: Objects، Blobs، Trees، Refs | Intermediate | L2+ |
-| git-branching-strategy | استراتژی شاخه‌بندی: Trunk-Based vs GitFlow | Intermediate | L2+ |
+| git-branching-strategy | استراتژی شاخه‌بندی: Trunk-Based vs GitFlow | Intermediate | L3+ |
 
 ## p9 (فاز 9) 🌐 شبکه
 از مدل OSI تا TCP، DNS، HTTP/2 و HTTP/3 — عمیق و کاربردی.
 
 | id | عنوان | سطح | L |
 |---|---|---|---|
-| net-tcp-handshake | TCP: هندشیک، کنترل ازدحام و چرخهٔ اتصال | Advanced | L4+ |
+| net-tcp-handshake | TCP: هندشیک، کنترل ازدحام و چرخهٔ اتصال | Advanced | L3+ |
 | net-dns | DNS: Resolver، Authoritative Server و TTL | Intermediate | L2+ |
 
 ## p10 (فاز 10) 🕸️ مبانی وب
@@ -115,11 +115,11 @@ Nginx، Gunicorn/Uvicorn، WSGI/ASGI و معماری قرارگیری آن‌ه�
 
 | id | عنوان | سطح | L |
 |---|---|---|---|
-| api-idempotency | Idempotency و طراحی API قابل‌اعتماد در برابر تکرار | Advanced | L4+ |
+| api-idempotency | Idempotency و طراحی API قابل‌اعتماد در برابر تکرار | Advanced | L3+ |
 | api-pagination-versioning | صفحه‌بندی، فیلترینگ و نسخه‌بندی API | Intermediate | L2+ |
 | api-graphql-grpc | GraphQL و gRPC: کی از REST بهتر است | Advanced | L4+ |
-| api-auth-oauth-oidc | OAuth 2.0 و OpenID Connect: احراز هویت واگذارشده | Advanced | L4+ |
-| api-contracts-docs | API به‌عنوان قرارداد: OpenAPI و Contract Testing | Intermediate | L2+ |
+| api-auth-oauth-oidc | OAuth 2.0 و OpenID Connect: احراز هویت واگذارشده | Advanced | L3+ |
+| api-contracts-docs | API به‌عنوان قرارداد: OpenAPI و Contract Testing | Intermediate | L3+ |
 
 ## p13 (فاز 13) 🎸 Django
 از ساختار پروژه تا داخلی‌های ORM، میان‌افزار و چرخهٔ درخواست.
@@ -127,7 +127,7 @@ Nginx، Gunicorn/Uvicorn، WSGI/ASGI و معماری قرارگیری آن‌ه�
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | django-request-lifecycle | چرخهٔ کامل یک درخواست در Django (Middleware، URL Resolver، View) | Intermediate | L2+ |
-| django-orm-internals | داخلی‌های ORM جنگو: QuerySet تنبل، select_related و N+1 | Advanced | L4+ |
+| django-orm-internals | داخلی‌های ORM جنگو: QuerySet تنبل، select_related و N+1 | Advanced | L3+ |
 
 ## p14 (فاز 14) 🧩 Django REST Framework
 Serializers، ViewSets، Permissions، Throttling و طراحی API حرفه‌ای با DRF.
@@ -135,7 +135,7 @@ Serializers، ViewSets، Permissions، Throttling و طراحی API حرفه‌�
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | drf-serializers-viewsets | Serializers، ViewSets و Routers در DRF | Intermediate | L2+ |
-| drf-auth-throttling | احراز هویت، Permission و Throttling در DRF | Advanced | L4+ |
+| drf-auth-throttling | احراز هویت، Permission و Throttling در DRF | Advanced | L3+ |
 
 ## p15 (فاز 15) 🗄️ مبانی دیتابیس
 نظریهٔ رابطه‌ای، نرمال‌سازی و SQL پیشرفته.
@@ -150,23 +150,23 @@ Query Planner، انواع ایندکس، اسکن‌ها و اتصال (Join) �
 
 | id | عنوان | سطح | L |
 |---|---|---|---|
-| db-query-planner | Query Planner، EXPLAIN و انتخاب استراتژی اجرا | Advanced | L4+ |
-| db-index-types-joins | انواع ایندکس (Partial، GiST، GIN، BRIN) و الگوریتم‌های JOIN | Advanced | L4+ |
+| db-query-planner | Query Planner، EXPLAIN و انتخاب استراتژی اجرا | Advanced | L3+ |
+| db-index-types-joins | انواع ایندکس (Partial، GiST، GIN، BRIN) و الگوریتم‌های JOIN | Advanced | L3+ |
 
 ## p17 (فاز 17) 🔒 تراکنش و همروندی دیتابیس
 ACID، سطوح Isolation، قفل‌ها و MVCC.
 
 | id | عنوان | سطح | L |
 |---|---|---|---|
-| db-acid-isolation | ACID و سطوح Isolation (Dirty Read، Phantom Read) | Advanced | L4+ |
-| db-locking-concurrency-control | قفل‌ها و کنترل همروندی: 2PL، خوش‌بینانه در برابر بدبینانه | Advanced | L4+ |
+| db-acid-isolation | ACID و سطوح Isolation (Dirty Read، Phantom Read) | Advanced | L3+ |
+| db-locking-concurrency-control | قفل‌ها و کنترل همروندی: 2PL، خوش‌بینانه در برابر بدبینانه | Advanced | L3+ |
 
 ## p18 (فاز 18) 🐘 PostgreSQL
 از نصب تا VACUUM، Replication، Partitioning و تنظیم عملکرد.
 
 | id | عنوان | سطح | L |
 |---|---|---|---|
-| pg-vacuum-wal | WAL، MVCC و VACUUM در PostgreSQL | Advanced | L4+ |
+| pg-vacuum-wal | WAL، MVCC و VACUUM در PostgreSQL | Advanced | L3+ |
 | pg-replication-partitioning | Replication (Streaming/Logical) و Partitioning | Expert | L5+ |
 
 ## p19 (فاز 19) 📦 NoSQL
@@ -174,8 +174,8 @@ ACID، سطوح Isolation، قفل‌ها و MVCC.
 
 | id | عنوان | سطح | L |
 |---|---|---|---|
-| nosql-categories | دسته‌بندی NoSQL و مدل CAP در انتخاب دیتابیس | Intermediate | L2+ |
-| redis-data-structures | Redis: ساختارهای داده، Persistence و کاربردهای توزیع‌شده | Advanced | L4+ |
+| nosql-categories | دسته‌بندی NoSQL و مدل CAP در انتخاب دیتابیس | Intermediate | L3+ |
+| redis-data-structures | Redis: ساختارهای داده، Persistence و کاربردهای توزیع‌شده | Advanced | L3+ |
 
 ## p20 (فاز 20) 📈 مقیاس‌پذیری دیتابیس
 Replication، Sharding، Consistent Hashing و الگوهای تراکنش توزیع‌شده.
@@ -189,21 +189,21 @@ Replication، Sharding، Consistent Hashing و الگوهای تراکنش تو�
 
 | id | عنوان | سطح | L |
 |---|---|---|---|
-| cache-strategies | استراتژی‌های کش و مشکلات کلاسیک آن | Advanced | L4+ |
+| cache-strategies | استراتژی‌های کش و مشکلات کلاسیک آن | Advanced | L3+ |
 
 ## p22 (فاز 22) ⏱️ پردازش ناهمگام
 صف تسک، Celery، Retry با Backoff و الگوهای تحویل پیام.
 
 | id | عنوان | سطح | L |
 |---|---|---|---|
-| celery-retries-idempotency | Celery: صف تسک، Retry با Exponential Backoff و Idempotency | Advanced | L4+ |
+| celery-retries-idempotency | Celery: صف تسک، Retry با Exponential Backoff و Idempotency | Advanced | L3+ |
 
 ## p23 (فاز 23) 📬 صف پیام و بروکرها
 RabbitMQ (Exchange/Queue) و Kafka (Partition/Offset/Consumer Group) — مقایسه و کاربرد.
 
 | id | عنوان | سطح | L |
 |---|---|---|---|
-| rabbitmq-exchanges | RabbitMQ: Exchange، Queue، Routing و Acknowledgement | Advanced | L4+ |
+| rabbitmq-exchanges | RabbitMQ: Exchange، Queue، Routing و Acknowledgement | Advanced | L3+ |
 | kafka-partitions-consumer-groups | Kafka: Partition، Offset و Consumer Group | Expert | L5+ |
 
 ## p24 (فاز 24) 🕰️ همروندی توزیع‌شده
@@ -266,8 +266,8 @@ Creational، Structural و Behavioral Patterns با کاربرد واقعی پا
 
 | id | عنوان | سطح | L |
 |---|---|---|---|
-| perf-profiling | پروفایلینگ پایتون با cProfile و py-spy | Advanced | L4+ |
-| perf-load-testing-n1 | تست بار (Load Testing) و شناسایی مشکل N+1 | Advanced | L4+ |
+| perf-profiling | پروفایلینگ پایتون با cProfile و py-spy | Advanced | L3+ |
+| perf-load-testing-n1 | تست بار (Load Testing) و شناسایی مشکل N+1 | Advanced | L3+ |
 
 ## p32 (فاز 32) ✅ تست
 Unit/Integration/E2E، pytest، Mock و تست عمیق Django.
@@ -275,14 +275,14 @@ Unit/Integration/E2E، pytest، Mock و تست عمیق Django.
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | testing-django-pytest | تست Django با pytest: Unit، Integration و Mock | Intermediate | L2+ |
-| testing-e2e-contract | تست E2E، Contract Testing و Property-Based Testing | Advanced | L4+ |
+| testing-e2e-contract | تست E2E، Contract Testing و Property-Based Testing | Advanced | L3+ |
 
 ## p33 (فاز 33) 🛡️ امنیت
 OWASP Top 10، احراز هویت/اختیار، رمزنگاری و مدل‌سازی تهدید.
 
 | id | عنوان | سطح | L |
 |---|---|---|---|
-| security-owasp-top | OWASP Top 10: SQL Injection، XSS، CSRF، SSRF، IDOR | Advanced | L4+ |
+| security-owasp-top | OWASP Top 10: SQL Injection، XSS، CSRF، SSRF، IDOR | Advanced | L3+ |
 | security-crypto-threat-modeling | مبانی رمزنگاری، مدیریت اسرار و مدل‌سازی تهدید (STRIDE) | Advanced | L4+ |
 
 ## p34 (فاز 34) 🐳 Docker
@@ -323,7 +323,7 @@ Terraform: State، Provider، Module و مدیریت drift.
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | cicd-deployment-strategies | استراتژی‌های استقرار: Rolling، Blue-Green و Canary | Advanced | L4+ |
-| cicd-pipeline-semver | طراحی مراحل پایپ‌لاین CI/CD و نسخه‌بندی معنایی (SemVer) | Intermediate | L2+ |
+| cicd-pipeline-semver | طراحی مراحل پایپ‌لاین CI/CD و نسخه‌بندی معنایی (SemVer) | Intermediate | L3+ |
 
 ## p39 (فاز 39) 🚨 SRE
 SLI/SLO/Error Budget، مدیریت اینسیدنت و پست‌مورتم بدون سرزنش.
@@ -338,7 +338,7 @@ SLI/SLO/Error Budget، مدیریت اینسیدنت و پست‌مورتم بد
 
 | id | عنوان | سطح | L |
 |---|---|---|---|
-| observability-three-pillars | سه ستون Observability: Metrics، Logs، Traces | Advanced | L4+ |
+| observability-three-pillars | سه ستون Observability: Metrics، Logs، Traces | Advanced | L3+ |
 
 ## p41 (فاز 41) 🏭 مهندسی تولید
 استقرار بدون Downtime، Migration ایمن، Feature Flag و بازیابی فاجعه.
@@ -383,24 +383,24 @@ ETL/ELT، پردازش دسته‌ای/جریانی و انبار داده، ت�
 
 | id | عنوان | سطح | L |
 |---|---|---|---|
-| search-inverted-index-bm25 | ایندکس معکوس، تحلیلگرها و رتبه‌بندی BM25 | Advanced | L4+ |
-| search-vector-semantic | جستجوی برداری/معنایی (Vector Search) و جستجوی فازی | Advanced | L4+ |
+| search-inverted-index-bm25 | ایندکس معکوس، تحلیلگرها و رتبه‌بندی BM25 | Advanced | L3+ |
+| search-vector-semantic | جستجوی برداری/معنایی (Vector Search) و جستجوی فازی | Advanced | L3+ |
 
 ## p47 (فاز 47) 💬 سیستم‌های بلادرنگ
 WebSocket، SSE، Pub/Sub و معماری چت/اعلان.
 
 | id | عنوان | سطح | L |
 |---|---|---|---|
-| realtime-websocket-presence | WebSocket، Django Channels و مدیریت Presence | Advanced | L4+ |
-| realtime-sse-webhooks | Server-Sent Events (SSE) و طراحی Webhook قابل‌اعتماد | Intermediate | L2+ |
+| realtime-websocket-presence | WebSocket، Django Channels و مدیریت Presence | Advanced | L3+ |
+| realtime-sse-webhooks | Server-Sent Events (SSE) و طراحی Webhook قابل‌اعتماد | Intermediate | L3+ |
 
 ## p48 (فاز 48) 📝 شیوه‌های مهندسی
 کد تمیز، Code Review، ADR/RFC و مدیریت بدهی فنی.
 
 | id | عنوان | سطح | L |
 |---|---|---|---|
-| eng-practices-adr-review | Architecture Decision Record (ADR) و Code Review مؤثر | Intermediate | L2+ |
-| eng-clean-code-techdebt | کد تمیز فراتر از SOLID، و مدیریت بدهی فنی | Intermediate | L2+ |
+| eng-practices-adr-review | Architecture Decision Record (ADR) و Code Review مؤثر | Intermediate | L3+ |
+| eng-clean-code-techdebt | کد تمیز فراتر از SOLID، و مدیریت بدهی فنی | Intermediate | L3+ |
 
 ## p49 (فاز 49) 🐞 مهارت دیباگ
 سناریوهای واقعی اینسیدنت: CPU 100%، نشت حافظه، Connection Pool Exhaustion و بیشتر.
@@ -415,7 +415,7 @@ WebSocket، SSE، Pub/Sub و معماری چت/اعلان.
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | code-quality-error-handling | طراحی مدیریت خطا (Exception Design) و خوانایی کد | Intermediate | L2+ |
-| code-quality-coupling-cohesion | Coupling و Cohesion، و تکامل سازگار با گذشتهٔ API | Advanced | L4+ |
+| code-quality-coupling-cohesion | Coupling و Cohesion، و تکامل سازگار با گذشتهٔ API | Advanced | L3+ |
 
 ## p51 (فاز 51) 🎓 بلوغ مهندسی
 واژگان سطح‌بندی مهندسی در سطح صنعت (Junior تا Principal) و نگاشت آن به نردبان رسمی بیت‌پین در فاز ۵۴.
