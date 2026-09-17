@@ -2062,6 +2062,7 @@ let SEARCH_QUERY = '';
 let FILTER_LEVEL = '';
 let FILTER_STATUS = '';
 let FILTER_BOOKMARK = false;
+let FILTER_LADDER = '';
 
 // ---------- Helpers ----------
 function statusLabel(s) {
@@ -2205,6 +2206,7 @@ function matchesFilters(t) {
     if (!hay.includes(q)) return false;
   }
   if (FILTER_LEVEL && t.level !== FILTER_LEVEL) return false;
+  if (FILTER_LADDER && t.minLadder !== Number(FILTER_LADDER)) return false;
   if (FILTER_STATUS) {
     const e = PROGRESS[t.id];
     const s = e ? e.status : 'not_started';
@@ -2240,6 +2242,17 @@ function renderPhasesView() {
       <option value="Intermediate" ${FILTER_LEVEL==='Intermediate'?'selected':''}>متوسط</option>
       <option value="Advanced" ${FILTER_LEVEL==='Advanced'?'selected':''}>پیشرفته</option>
       <option value="Expert" ${FILTER_LEVEL==='Expert'?'selected':''}>خبره</option>
+    </select>
+    <select onchange="FILTER_LADDER=this.value; render()">
+      <option value="">همهٔ سطوح نردبان (L)</option>
+      <option value="1" ${FILTER_LADDER==='1'?'selected':''}>L1+</option>
+      <option value="2" ${FILTER_LADDER==='2'?'selected':''}>L2+</option>
+      <option value="3" ${FILTER_LADDER==='3'?'selected':''}>L3+</option>
+      <option value="4" ${FILTER_LADDER==='4'?'selected':''}>L4+</option>
+      <option value="5" ${FILTER_LADDER==='5'?'selected':''}>L5+</option>
+      <option value="6" ${FILTER_LADDER==='6'?'selected':''}>L6+</option>
+      <option value="7" ${FILTER_LADDER==='7'?'selected':''}>L7+</option>
+      <option value="8" ${FILTER_LADDER==='8'?'selected':''}>L8+</option>
     </select>
     <select onchange="FILTER_STATUS=this.value; render()">
       <option value="">همهٔ وضعیت‌ها</option>
