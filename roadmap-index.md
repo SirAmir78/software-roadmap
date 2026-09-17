@@ -55,6 +55,8 @@
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | ds-hash-table | Hash Table | Intermediate | L2+ |
+| ds-linear-structures | آرایه، لیست پیوندی، پشته و صف | Beginner | L1+ |
+| ds-trees-heaps | درخت جستجوی دودویی، هیپ و Trie | Intermediate | L2+ |
 | ds-btree | B-Tree و B+Tree | Advanced | L4+ |
 | ds-lsm-tree | LSM Tree | Expert | L5+ |
 
@@ -64,6 +66,8 @@
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | algo-complexity | تحلیل پیچیدگی (Big O) | Beginner | L1+ |
+| algo-sorting-recursion | مرتب‌سازی، بازگشت و تقسیم‌وغلبه | Beginner | L1+ |
+| algo-dp-greedy | برنامه‌نویسی پویا و الگوریتم حریصانه | Intermediate | L2+ |
 | algo-graph-bfs-dfs | BFS، DFS و کوتاه‌ترین مسیر (Dijkstra) | Intermediate | L2+ |
 
 ## p7 (فاز 7) ➗ ریاضیات مهندسی نرم‌افزار
@@ -72,6 +76,7 @@
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | math-prob-queueing | احتمال و تئوری صف (Queueing Theory) برای ظرفیت‌سنجی | Intermediate | L2+ |
+| math-combinatorics-info-theory | ترکیبیات و نظریهٔ اطلاعات برای مهندسی | Intermediate | L2+ |
 
 ## p8 (فاز 8) 🌿 Git و کنترل نسخه
 مدل داده‌ای Git، استراتژی‌های شاخه‌بندی و بازبینی کد حرفه‌ای.
@@ -112,6 +117,9 @@ Nginx، Gunicorn/Uvicorn، WSGI/ASGI و معماری قرارگیری آن‌ه�
 |---|---|---|---|
 | api-idempotency | Idempotency و طراحی API قابل‌اعتماد در برابر تکرار | Advanced | L4+ |
 | api-pagination-versioning | صفحه‌بندی، فیلترینگ و نسخه‌بندی API | Intermediate | L2+ |
+| api-graphql-grpc | GraphQL و gRPC: کی از REST بهتر است | Advanced | L4+ |
+| api-auth-oauth-oidc | OAuth 2.0 و OpenID Connect: احراز هویت واگذارشده | Advanced | L4+ |
+| api-contracts-docs | API به‌عنوان قرارداد: OpenAPI و Contract Testing | Intermediate | L2+ |
 
 ## p13 (فاز 13) 🎸 Django
 از ساختار پروژه تا داخلی‌های ORM، میان‌افزار و چرخهٔ درخواست.
@@ -134,6 +142,7 @@ Serializers، ViewSets، Permissions، Throttling و طراحی API حرفه‌�
 
 | id | عنوان | سطح | L |
 |---|---|---|---|
+| db-relational-modeling | مدل‌سازی رابطه‌ای: ER، کلیدها/محدودیت‌ها و انواع JOIN | Beginner | L1+ |
 | db-normalization | نرمال‌سازی (1NF تا BCNF) و دنرمال‌سازی آگاهانه | Intermediate | L2+ |
 
 ## p16 (فاز 16) ⚙️ داخلی دیتابیس
@@ -142,6 +151,7 @@ Query Planner، انواع ایندکس، اسکن‌ها و اتصال (Join) �
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | db-query-planner | Query Planner، EXPLAIN و انتخاب استراتژی اجرا | Advanced | L4+ |
+| db-index-types-joins | انواع ایندکس (Partial، GiST، GIN، BRIN) و الگوریتم‌های JOIN | Advanced | L4+ |
 
 ## p17 (فاز 17) 🔒 تراکنش و همروندی دیتابیس
 ACID، سطوح Isolation، قفل‌ها و MVCC.
@@ -149,6 +159,7 @@ ACID، سطوح Isolation، قفل‌ها و MVCC.
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | db-acid-isolation | ACID و سطوح Isolation (Dirty Read، Phantom Read) | Advanced | L4+ |
+| db-locking-concurrency-control | قفل‌ها و کنترل همروندی: 2PL، خوش‌بینانه در برابر بدبینانه | Advanced | L4+ |
 
 ## p18 (فاز 18) 🐘 PostgreSQL
 از نصب تا VACUUM، Replication، Partitioning و تنظیم عملکرد.
@@ -201,6 +212,7 @@ RabbitMQ (Exchange/Queue) و Kafka (Partition/Offset/Consumer Group) — مقا�
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | logical-clocks-consensus | ساعت منطقی (Lamport/Vector Clock) و مقدمهٔ Consensus (Raft) | Expert | L5+ |
+| dist-2pc-paxos-crdt | Two-Phase Commit، Paxos و CRDT: راه‌های دیگر توافق و ادغام بدون هماهنگی | Expert | L5+ |
 
 ## p25 (فاز 25) 🌍 سیستم‌های توزیع‌شده
 CAP/PACELC، سازگاری، الگوهای تحمل خطا (Circuit Breaker، Saga، Outbox).
@@ -216,6 +228,7 @@ SOLID، DRY، KISS، YAGNI و اصول طراحی ماژولار.
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | solid-principles | اصول SOLID با مثال پایتون/Django | Intermediate | L2+ |
+| dry-kiss-yagni | DRY، KISS، YAGNI و مصالحهٔ آن‌ها با SOLID | Intermediate | L2+ |
 
 ## p27 (فاز 27) 🧱 الگوهای طراحی
 Creational، Structural و Behavioral Patterns با کاربرد واقعی پایتونی.
@@ -223,6 +236,7 @@ Creational، Structural و Behavioral Patterns با کاربرد واقعی پا
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | design-patterns-practical | الگوهای طراحی رایج در بک‌اند: Factory، Strategy، Observer، Decorator | Intermediate | L2+ |
+| design-patterns-creational-structural | Singleton، Adapter، Builder و Command: الگوهای Creational/Structural باقی‌مانده | Intermediate | L2+ |
 
 ## p28 (فاز 28) 🏛️ معماری نرم‌افزار
 لایه‌بندی، Clean/Hexagonal Architecture و Domain-Driven Design.
@@ -237,6 +251,7 @@ Creational، Structural و Behavioral Patterns با کاربرد واقعی پا
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | microservices-boundaries | مرزبندی سرویس، مالکیت داده و چرا مونولیت گاهی بهتر است | Advanced | L4+ |
+| microservices-communication-gateway | ارتباط بین سرویس‌ها، API Gateway، Service Mesh و Strangler Fig | Advanced | L4+ |
 
 ## p30 (فاز 30) 🏗️ طراحی سیستم
 از تخمین ظرفیت تا طراحی کامل سیستم‌های بزرگ‌مقیاس (URL Shortener تا صرافی).
@@ -252,6 +267,7 @@ Creational، Structural و Behavioral Patterns با کاربرد واقعی پا
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | perf-profiling | پروفایلینگ پایتون با cProfile و py-spy | Advanced | L4+ |
+| perf-load-testing-n1 | تست بار (Load Testing) و شناسایی مشکل N+1 | Advanced | L4+ |
 
 ## p32 (فاز 32) ✅ تست
 Unit/Integration/E2E، pytest، Mock و تست عمیق Django.
@@ -259,6 +275,7 @@ Unit/Integration/E2E، pytest، Mock و تست عمیق Django.
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | testing-django-pytest | تست Django با pytest: Unit، Integration و Mock | Intermediate | L2+ |
+| testing-e2e-contract | تست E2E، Contract Testing و Property-Based Testing | Advanced | L4+ |
 
 ## p33 (فاز 33) 🛡️ امنیت
 OWASP Top 10، احراز هویت/اختیار، رمزنگاری و مدل‌سازی تهدید.
@@ -266,6 +283,7 @@ OWASP Top 10، احراز هویت/اختیار، رمزنگاری و مدل‌�
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | security-owasp-top | OWASP Top 10: SQL Injection، XSS، CSRF، SSRF، IDOR | Advanced | L4+ |
+| security-crypto-threat-modeling | مبانی رمزنگاری، مدیریت اسرار و مدل‌سازی تهدید (STRIDE) | Advanced | L4+ |
 
 ## p34 (فاز 34) 🐳 Docker
 Container، Image، Dockerfile چندمرحله‌ای، شبکه و امنیت.
@@ -273,6 +291,7 @@ Container، Image، Dockerfile چندمرحله‌ای، شبکه و امنیت.
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | docker-images-layers | Image، Layer و Dockerfile چندمرحله‌ای (Multi-stage) | Intermediate | L2+ |
+| docker-networking-volumes-security | شبکهٔ Docker، Volume و اسکن امنیتی Image | Intermediate | L2+ |
 
 ## p35 (فاز 35) ☸️ Kubernetes
 Pod، Deployment، Service، HPA، StatefulSet و مدیریت خوشه در مقیاس.
@@ -280,6 +299,7 @@ Pod، Deployment، Service، HPA، StatefulSet و مدیریت خوشه در م�
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | k8s-core-objects | Pod، Deployment، Service و چرخهٔ حیات در Kubernetes | Advanced | L4+ |
+| k8s-statefulset-hpa-config | StatefulSet، HPA، ConfigMap/Secret و Ingress | Advanced | L4+ |
 
 ## p36 (فاز 36) ☁️ کلاود
 مفاهیم AWS (IAM، VPC، EC2، S3، RDS) قابل انتقال به سایر کلودها.
@@ -287,6 +307,7 @@ Pod، Deployment، Service، HPA، StatefulSet و مدیریت خوشه در م�
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | cloud-vpc-iam | VPC، Subnet، Security Group و IAM | Intermediate | L2+ |
+| cloud-compute-storage-managed-db | محاسبات، ذخیره‌سازی شیء و دیتابیس مدیریت‌شده در کلود | Intermediate | L2+ |
 
 ## p37 (فاز 37) 🧾 زیرساخت به‌عنوان کد
 Terraform: State، Provider، Module و مدیریت drift.
@@ -294,6 +315,7 @@ Terraform: State، Provider، Module و مدیریت drift.
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | terraform-state-modules | Terraform: State، Plan/Apply و ماژول‌سازی | Advanced | L4+ |
+| secrets-management-kms | مدیریت اسرار (Secrets Management) و KMS | Advanced | L4+ |
 
 ## p38 (فاز 38) 🔁 CI/CD
 پایپ‌لاین ساخت/تست/استقرار و استراتژی‌های Deploy (Blue-Green، Canary).
@@ -301,6 +323,7 @@ Terraform: State، Provider، Module و مدیریت drift.
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | cicd-deployment-strategies | استراتژی‌های استقرار: Rolling، Blue-Green و Canary | Advanced | L4+ |
+| cicd-pipeline-semver | طراحی مراحل پایپ‌لاین CI/CD و نسخه‌بندی معنایی (SemVer) | Intermediate | L2+ |
 
 ## p39 (فاز 39) 🚨 SRE
 SLI/SLO/Error Budget، مدیریت اینسیدنت و پست‌مورتم بدون سرزنش.
@@ -323,6 +346,7 @@ SLI/SLO/Error Budget، مدیریت اینسیدنت و پست‌مورتم بد
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | prod-zero-downtime-migration | Migration دیتابیس سازگار با گذشته (Backward-Compatible) و استقرار بدون Downtime | Expert | L5+ |
+| backup-disaster-recovery | استراتژی Backup، RTO/RPO و بازیابی فاجعه | Expert | L5+ |
 
 ## p42 (فاز 42) 🔄 دسترس‌پذیری بالا
 افزونگی، Failover، Multi-AZ/Multi-Region و Graceful Degradation.
@@ -344,6 +368,7 @@ Event Sourcing، CQRS، Transactional Outbox و CDC.
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | eda-outbox-cqrs | الگوی Transactional Outbox و CQRS | Expert | L5+ |
+| eda-event-sourcing | Event Sourcing: ذخیرهٔ رویداد به‌جای وضعیت | Expert | L5+ |
 
 ## p45 (فاز 45) 📊 مهندسی داده
 ETL/ELT، پردازش دسته‌ای/جریانی و انبار داده، تا حد نیاز یک بک‌اند ارشد.
@@ -351,6 +376,7 @@ ETL/ELT، پردازش دسته‌ای/جریانی و انبار داده، ت�
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | data-eng-etl-cdc | ETL/ELT و Change Data Capture (CDC) | Intermediate | L2+ |
+| dataeng-warehousing-streaming | مدل‌سازی انبار داده و پردازش جریانی (Stream Processing) | Advanced | L4+ |
 
 ## p46 (فاز 46) 🔍 جستجو
 ایندکس معکوس، تحلیلگرها، Relevance (BM25) و معماری Elasticsearch.
@@ -358,6 +384,7 @@ ETL/ELT، پردازش دسته‌ای/جریانی و انبار داده، ت�
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | search-inverted-index-bm25 | ایندکس معکوس، تحلیلگرها و رتبه‌بندی BM25 | Advanced | L4+ |
+| search-vector-semantic | جستجوی برداری/معنایی (Vector Search) و جستجوی فازی | Advanced | L4+ |
 
 ## p47 (فاز 47) 💬 سیستم‌های بلادرنگ
 WebSocket، SSE، Pub/Sub و معماری چت/اعلان.
@@ -365,6 +392,7 @@ WebSocket، SSE، Pub/Sub و معماری چت/اعلان.
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | realtime-websocket-presence | WebSocket، Django Channels و مدیریت Presence | Advanced | L4+ |
+| realtime-sse-webhooks | Server-Sent Events (SSE) و طراحی Webhook قابل‌اعتماد | Intermediate | L2+ |
 
 ## p48 (فاز 48) 📝 شیوه‌های مهندسی
 کد تمیز، Code Review، ADR/RFC و مدیریت بدهی فنی.
@@ -372,6 +400,7 @@ WebSocket، SSE، Pub/Sub و معماری چت/اعلان.
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | eng-practices-adr-review | Architecture Decision Record (ADR) و Code Review مؤثر | Intermediate | L2+ |
+| eng-clean-code-techdebt | کد تمیز فراتر از SOLID، و مدیریت بدهی فنی | Intermediate | L2+ |
 
 ## p49 (فاز 49) 🐞 مهارت دیباگ
 سناریوهای واقعی اینسیدنت: CPU 100%، نشت حافظه، Connection Pool Exhaustion و بیشتر.
@@ -386,13 +415,14 @@ WebSocket، SSE، Pub/Sub و معماری چت/اعلان.
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | code-quality-error-handling | طراحی مدیریت خطا (Exception Design) و خوانایی کد | Intermediate | L2+ |
+| code-quality-coupling-cohesion | Coupling و Cohesion، و تکامل سازگار با گذشتهٔ API | Advanced | L4+ |
 
 ## p51 (فاز 51) 🎓 بلوغ مهندسی
-تفاوت Junior تا Staff: مالکیت، تصمیم‌گیری فنی و رهبری فنی.
+واژگان سطح‌بندی مهندسی در سطح صنعت (Junior تا Principal) و نگاشت آن به نردبان رسمی بیت‌پین در فاز ۵۴.
 
 | id | عنوان | سطح | L |
 |---|---|---|---|
-| eng-maturity-levels | تفاوت Junior، Mid، Senior، Staff و Principal Engineer | Advanced | L4+ |
+| eng-maturity-levels | واژگان بلوغ مهندسی در سطح صنعت و نگاشت آن به نردبان بیت‌پین | Advanced | L4+ |
 
 ## p52 (فاز 52) 🏆 طراحی سیستم سطح Senior/Staff
 طراحی سیستم‌های واقعاً پیچیده: صرافی، سیستم پرداخت، فید خبر مقیاس‌بزرگ.
@@ -400,6 +430,8 @@ WebSocket، SSE، Pub/Sub و معماری چت/اعلان.
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | sysdesign-payment-ledger | طراحی سیستم پرداخت و Ledger با تضمین سازگاری قوی | Expert | L5+ |
+| sysdesign-newsfeed-ranking | طراحی فید خبر مقیاس‌بزرگ: Fan-out و رتبه‌بندی | Expert | L5+ |
+| sysdesign-exchange-matching | طراحی موتور تطبیق سفارش صرافی (Matching Engine) | Expert | L5+ |
 
 ## p53 (فاز 53) 🎯 آزمون جامع نهایی (Capstone)
 ارزیابی نهایی ترکیبی از تمام حوزه‌ها: نظری، کدنویسی، SQL، دیباگ، طراحی سیستم و زیرساخت.
