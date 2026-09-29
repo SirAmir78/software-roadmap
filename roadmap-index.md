@@ -3,7 +3,7 @@
 این فایل یک نمایهٔ فشرده از `roadmap.html` است — فقط شناسه/عنوان/سطح/برچسب نردبان — تا بدون بارگذاری کل فایل ۴۵۰KB بتوان ساختار نقشه راه را مرور کرد.
 
 - ستون **سطح** = دشواری موضوع (Beginner/Intermediate/Advanced/Expert).
-- ستون **L** = حداقل سطح نردبان مهندسی نرم‌افزار (۱ تا ۸) که باید این موضوع را بداند؛ سطوح بالاتر هم باید بدانند (تعریف کامل هر سطح در فاز p54 و در `نردبان مهندس نرم_افزار بیت_پین.md`).
+- ستون **L** = حداقل سطح نردبان مهندسی نرم‌افزار (۱ تا ۸) که باید این موضوع را بداند؛ سطوح بالاتر هم باید بدانند (تعریف کامل هر سطح در فاز p54 و در `نردبان مهندس نرم_افزار بیت_پین.md`). مقدار **اختیاری** یعنی موضوع برای هیچ سطحی الزامی نیست (دانش تکمیلی/تخصصی بسته به نقش).
 
 ## p0 (فاز 0) 🧭 یادگرفتنِ یادگیری
 مهارت‌های فراشناختی که به همه فازهای بعدی سرعت می‌دهند.
@@ -37,8 +37,18 @@
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | linux-filesystem | فایل‌سیستم لینوکس، inode و مجوزها | Beginner | L1+ |
+| linux-shell-basics | مبانی Shell: ناوبری، Pipe، Redirect و Job Control | Beginner | L1+ |
+| linux-text-processing | پردازش متن و جستجو: grep، find، sed، awk، xargs | Beginner | L1+ |
+| linux-env-vars | متغیرهای محیطی: export، PATH، فایل‌های .env و پیکربندی Shell | Beginner | L1+ |
+| linux-shells-zsh | Shellهای مختلف (bash، zsh، fish)، Oh My Zsh، Aliases و Dotfiles | Beginner | اختیاری |
+| linux-tmux | tmux: Session، Window، Pane و کار پایدار روی سرور | Beginner | اختیاری |
+| linux-htop-resources | مانیتورینگ منابع: htop، free، df/du، iotop و Load Average | Beginner | L1+ |
 | linux-process-tools | ابزارهای مانیتورینگ و عیب‌یابی پردازش (ps, top, strace, lsof) | Intermediate | L2+ |
+| linux-systemd | systemd: مدیریت سرویس‌ها، Unit File و Timer | Intermediate | L3+ |
+| linux-logs | لاگ‌ها در لینوکس: journalctl، /var/log، tail -f، less و logrotate | Intermediate | L2+ |
 | linux-networking-tools | ابزارهای شبکه: ss, tcpdump, dig, curl | Intermediate | L2+ |
+| linux-ssh | SSH حرفه‌ای: کلیدها، ~/.ssh/config، Tunneling و انتقال فایل | Intermediate | L2+ |
+| linux-bash-scripting | اسکریپت‌نویسی Bash: متغیر، شرط، حلقه، تابع و اسکریپت امن | Intermediate | L3+ |
 
 ## p4 (فاز 4) 🐍 برنامه‌نویسی پایتون
 از مبانی زبان تا مفاهیم پیشرفته: async، GIL، مدیریت حافظه و CPython.
@@ -58,7 +68,7 @@
 | ds-linear-structures | آرایه، لیست پیوندی، پشته و صف | Beginner | L1+ |
 | ds-trees-heaps | درخت جستجوی دودویی، هیپ و Trie | Intermediate | L2+ |
 | ds-btree | B-Tree و B+Tree | Advanced | L3+ |
-| ds-lsm-tree | LSM Tree | Expert | L5+ |
+| ds-lsm-tree | LSM Tree | Expert | اختیاری |
 
 ## p6 (فاز 6) 🧮 الگوریتم‌ها
 پیچیدگی، جستجو، مرتب‌سازی، گراف و برنامه‌نویسی پویا با کاربرد بک‌اند.
@@ -76,7 +86,7 @@
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | math-prob-queueing | احتمال و تئوری صف (Queueing Theory) برای ظرفیت‌سنجی | Intermediate | L2+ |
-| math-combinatorics-info-theory | ترکیبیات و نظریهٔ اطلاعات برای مهندسی | Intermediate | L2+ |
+| math-combinatorics-info-theory | ترکیبیات و نظریهٔ اطلاعات برای مهندسی | Intermediate | اختیاری |
 
 ## p8 (فاز 8) 🌿 Git و کنترل نسخه
 مدل داده‌ای Git، استراتژی‌های شاخه‌بندی و بازبینی کد حرفه‌ای.
@@ -212,7 +222,7 @@ RabbitMQ (Exchange/Queue) و Kafka (Partition/Offset/Consumer Group) — مقا�
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | logical-clocks-consensus | ساعت منطقی (Lamport/Vector Clock) و مقدمهٔ Consensus (Raft) | Expert | L5+ |
-| dist-2pc-paxos-crdt | Two-Phase Commit، Paxos و CRDT: راه‌های دیگر توافق و ادغام بدون هماهنگی | Expert | L5+ |
+| dist-2pc-paxos-crdt | Two-Phase Commit، Paxos و CRDT: راه‌های دیگر توافق و ادغام بدون هماهنگی | Expert | اختیاری |
 
 ## p25 (فاز 25) 🌍 سیستم‌های توزیع‌شده
 CAP/PACELC، سازگاری، الگوهای تحمل خطا (Circuit Breaker، Saga، Outbox).
@@ -368,23 +378,23 @@ Event Sourcing، CQRS، Transactional Outbox و CDC.
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | eda-outbox-cqrs | الگوی Transactional Outbox و CQRS | Expert | L5+ |
-| eda-event-sourcing | Event Sourcing: ذخیرهٔ رویداد به‌جای وضعیت | Expert | L5+ |
+| eda-event-sourcing | Event Sourcing: ذخیرهٔ رویداد به‌جای وضعیت | Expert | اختیاری |
 
 ## p45 (فاز 45) 📊 مهندسی داده
 ETL/ELT، پردازش دسته‌ای/جریانی و انبار داده، تا حد نیاز یک بک‌اند ارشد.
 
 | id | عنوان | سطح | L |
 |---|---|---|---|
-| data-eng-etl-cdc | ETL/ELT و Change Data Capture (CDC) | Intermediate | L2+ |
-| dataeng-warehousing-streaming | مدل‌سازی انبار داده و پردازش جریانی (Stream Processing) | Advanced | L4+ |
+| data-eng-etl-cdc | ETL/ELT و Change Data Capture (CDC) | Intermediate | اختیاری |
+| dataeng-warehousing-streaming | مدل‌سازی انبار داده و پردازش جریانی (Stream Processing) | Advanced | اختیاری |
 
 ## p46 (فاز 46) 🔍 جستجو
 ایندکس معکوس، تحلیلگرها، Relevance (BM25) و معماری Elasticsearch.
 
 | id | عنوان | سطح | L |
 |---|---|---|---|
-| search-inverted-index-bm25 | ایندکس معکوس، تحلیلگرها و رتبه‌بندی BM25 | Advanced | L3+ |
-| search-vector-semantic | جستجوی برداری/معنایی (Vector Search) و جستجوی فازی | Advanced | L3+ |
+| search-inverted-index-bm25 | ایندکس معکوس، تحلیلگرها و رتبه‌بندی BM25 | Advanced | اختیاری |
+| search-vector-semantic | جستجوی برداری/معنایی (Vector Search) و جستجوی فازی | Advanced | اختیاری |
 
 ## p47 (فاز 47) 💬 سیستم‌های بلادرنگ
 WebSocket، SSE، Pub/Sub و معماری چت/اعلان.
@@ -430,7 +440,7 @@ WebSocket، SSE، Pub/Sub و معماری چت/اعلان.
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | sysdesign-payment-ledger | طراحی سیستم پرداخت و Ledger با تضمین سازگاری قوی | Expert | L5+ |
-| sysdesign-newsfeed-ranking | طراحی فید خبر مقیاس‌بزرگ: Fan-out و رتبه‌بندی | Expert | L5+ |
+| sysdesign-newsfeed-ranking | طراحی فید خبر مقیاس‌بزرگ: Fan-out و رتبه‌بندی | Expert | اختیاری |
 | sysdesign-exchange-matching | طراحی موتور تطبیق سفارش صرافی (Matching Engine) | Expert | L5+ |
 
 ## p53 (فاز 53) 🎯 آزمون جامع نهایی (Capstone)
@@ -438,7 +448,7 @@ WebSocket، SSE، Pub/Sub و معماری چت/اعلان.
 
 | id | عنوان | سطح | L |
 |---|---|---|---|
-| capstone-final-project | پروژهٔ نهایی: پلتفرم سرمایه‌گذاری/مالی کامل با تمام لایه‌های تولیدی | Expert | L5+ |
+| capstone-final-project | پروژهٔ نهایی: پلتفرم سرمایه‌گذاری/مالی کامل با تمام لایه‌های تولیدی | Expert | اختیاری |
 
 ## p54 (فاز 54) 🪜 نردبان مهندسی نرم‌افزار (Career Ladder)
 تطبیق مهارت‌های فنی این نقشه راه با سطوح رسمی نردبان مهندسی نرم‌افزار (سطح ۱ تا ۸) — قلمرو، اثرگذاری، مهارت و رفتار مورد انتظار در هر سطح.
