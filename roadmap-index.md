@@ -241,12 +241,20 @@ SOLID، DRY، KISS، YAGNI و اصول طراحی ماژولار.
 | dry-kiss-yagni | DRY، KISS، YAGNI و مصالحهٔ آن‌ها با SOLID | Intermediate | L2+ |
 
 ## p27 (فاز 27) 🧱 الگوهای طراحی
-Creational، Structural و Behavioral Patterns با کاربرد واقعی پایتونی.
+کاتالوگ کامل GoF (Creational، Structural مثل Facade/Proxy، Behavioral مثل State/Chain)، الگوهای پایتونیک و همروندی، الگوهای سازمانی (Repository، Unit of Work، Service Layer)، الگوهای پیام‌رسانی (Outbox، Inbox) و Anti-patternها.
 
 | id | عنوان | سطح | L |
 |---|---|---|---|
 | design-patterns-practical | الگوهای طراحی رایج در بک‌اند: Factory، Strategy، Observer، Decorator | Intermediate | L2+ |
 | design-patterns-creational-structural | Singleton، Adapter، Builder و Command: الگوهای Creational/Structural باقی‌مانده | Intermediate | L2+ |
+| design-patterns-structural-facade-proxy | Facade، Proxy، Composite، Bridge و Flyweight: الگوهای Structural تکمیلی | Intermediate | L2+ |
+| design-patterns-creational-advanced | Factory Method، Abstract Factory، Prototype، Object Pool و Registry: الگوهای Creational تکمیلی | Intermediate | L3+ |
+| design-patterns-behavioral-advanced | Template Method، Chain of Responsibility، State، Mediator، Iterator، Memento و Visitor: الگوهای Behavioral تکمیلی | Intermediate | L3+ |
+| design-patterns-pythonic | الگوهای پایتونیک: Context Manager، Descriptor، Mixin، Generator و توابع درجه‌یک به‌جای کلاس‌های GoF | Intermediate | L2+ |
+| design-patterns-concurrency | الگوهای همروندی: Producer-Consumer، Worker Pool، Future/Promise، Read-Write Lock و Double-Checked Locking | Advanced | L3+ |
+| design-patterns-enterprise | الگوهای سازمانی (PoEAA): Repository، Unit of Work، Service Layer، Active Record در برابر Data Mapper، DTO و Dependency Injection | Advanced | L3+ |
+| design-patterns-messaging | الگوهای پیام‌رسانی و یکپارچه‌سازی: Transactional Outbox، Inbox/Idempotent Consumer، Competing Consumers، Dead Letter و Correlation ID | Advanced | L4+ |
+| design-patterns-antipatterns | Anti-patternها و انتخاب الگو: God Object، Anemic Domain Model، Service Locator، Golden Hammer و Spaghetti Signals | Intermediate | L3+ |
 
 ## p28 (فاز 28) 🏛️ معماری نرم‌افزار
 لایه‌بندی، Clean/Hexagonal Architecture و Domain-Driven Design.
