@@ -1,2 +1,3 @@
-roadmap-progress*.json
-network-roadmap-progress*.json
+# Exported progress files (also the files you import back), any folder.
+# Personal study data: never commit.
+*progress*.json

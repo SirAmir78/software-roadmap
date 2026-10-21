@@ -8,19 +8,41 @@
 
 Self-paced learning roadmaps for backend engineers. Each roadmap is a single, self-contained HTML file (the UI is in Persian): no server, no build step, no account. Your progress is saved in your browser, and you move it between browsers or machines with **Export** and **Import**.
 
-### What's in this repo
+### Repository layout
 
-| File | What it is |
+```text
+.
+├── README.md
+├── .gitignore
+└── roadmaps/
+    ├── bitpin-engineering-ladder.md          # Bitpin engineering ladder (L1–L8), shared by all roadmaps
+    ├── backend/                              # main roadmap
+    │   ├── roadmap.html
+    │   └── roadmap-index.md
+    ├── database/
+    │   ├── roadmap.html
+    │   └── roadmap-index.md
+    └── networking/
+        ├── roadmap.html
+        └── roadmap-index.md
+```
+
+Every roadmap folder has the same two files:
+
+- `roadmap.html` is the roadmap itself. Open it in a browser.
+- `roadmap-index.md` is a compact index (id, title, level, ladder L) of that roadmap. It's handy for skimming or for giving an AI the structure without the full HTML.
+
+| Folder | Roadmap |
 |---|---|
-| `roadmap.html` | Main roadmap: senior backend engineer (Python, Django, SRE, distributed systems) |
-| `network/roadmap.html` | Network roadmap (DNS, TLS, routing, proxy, VPN, Linux networking) |
-| `database/database-roadmap.html` | Database roadmap (SQL, NoSQL, indexing, sharding, plus a catalog of databases) |
-| `roadmap-index.md`, `network/roadmap-index.md`, `database/database-roadmap-index.md` | Compact indexes (id, title, level, ladder L) of each roadmap. Handy for skimming or for giving an AI the structure without the full HTML |
-| `نردبان مهندس نرم_افزار بیت_پین.md` | The Bitpin engineering ladder (L1–L8) that topics are tagged against |
+| `roadmaps/backend/` | Main roadmap: senior backend engineer (Python, Django, SRE, distributed systems) |
+| `roadmaps/database/` | Database roadmap (SQL, NoSQL, indexing, sharding, plus a catalog of databases) |
+| `roadmaps/networking/` | Network roadmap (DNS, TLS, routing, proxy, VPN, Linux networking) |
+
+To add a new roadmap, create `roadmaps/<topic>/` with its own `roadmap.html` and `roadmap-index.md`. Give it its own `localStorage` key and an export file name that contains `progress` and ends in `.json`, so `.gitignore` already covers it.
 
 ### Getting started
 
-1. Open one of the HTML files in a browser (double-click it, or `xdg-open roadmap.html`). Everything works offline except the external resource links.
+1. Open one of the HTML files in a browser (double-click it, or `xdg-open roadmaps/backend/roadmap.html`). Everything works offline except the external resource links.
 2. Start at **Dashboard**. It shows your overall stats, the suggested next topic (the first unfinished topic whose prerequisites are all done), your bookmarks, topics due for review, and a gap analysis for key domains.
 3. Use **Phases** to browse topics. Click a card to open the topic.
 
@@ -100,7 +122,7 @@ Click **⬇️ Export progress file** (`اکسپورت فایل پیشرفت`) i
 
 - Keys in `progress` are topic ids (the `id` column in the index files). Capstone items are stored as `capstone_<section>_<n>`, or `netcapstone_…` in the network roadmap.
 - The network export also includes `"kind": "network-roadmap"`. The database export includes `"app": "database-roadmap"` and a `summary` (`done`, `total`, `pct`).
-- `roadmap-progress*.json`, `network-roadmap-progress*.json` and `db-roadmap-progress*.json` are in `.gitignore`. You can keep exports in the repo folder and they won't be committed.
+- `.gitignore` ignores every `*progress*.json` file in any folder. That covers both the files you export and the ones you import back. You can keep them anywhere in the repo and they won't be committed.
 
 ### Import
 
@@ -136,19 +158,25 @@ How **Merge** behaves per roadmap:
 
 نقشه‌های راه یادگیری خودخوان برای مهندسان بک‌اند. هر نقشه راه یک فایل HTML مستقل است: بدون سرور، بدون build و بدون حساب کاربری. پیشرفت شما در مرورگر ذخیره می‌شود و با **اکسپورت** و **ایمپورت** آن را بین مرورگرها یا سیستم‌ها جابه‌جا می‌کنید.
 
-### محتوای مخزن
+### ساختار مخزن
 
-| فایل | توضیح |
+همهٔ نقشه‌های راه داخل پوشهٔ `roadmaps/` هستند و هر نقشه راه زیرپوشهٔ خودش را دارد (درخت کامل پوشه‌ها در بخش انگلیسی آمده است). هر زیرپوشه دو فایل یکسان دارد:
+
+- `roadmap.html` خود نقشه راه است. آن را در مرورگر باز کنید.
+- `roadmap-index.md` نمایهٔ فشردهٔ همان نقشه راه است (شناسه، عنوان، سطح، نردبان L). برای مرور سریع یا دادن ساختار به AI بدون کل HTML مناسب است.
+
+| پوشه | نقشه راه |
 |---|---|
-| `roadmap.html` | نقشه راه اصلی: مهندس بک‌اند ارشد (Python، Django، SRE، سیستم‌های توزیع‌شده) |
-| `network/roadmap.html` | نقشه راه شبکه (DNS، TLS، Routing، Proxy، VPN، شبکه در لینوکس) |
-| `database/database-roadmap.html` | نقشه راه دیتابیس (SQL، NoSQL، Indexing، Sharding و کاتالوگ دیتابیس‌ها) |
-| `roadmap-index.md`، `network/roadmap-index.md`، `database/database-roadmap-index.md` | نمایهٔ فشردهٔ هر نقشه راه (شناسه، عنوان، سطح، نردبان L). برای مرور سریع یا دادن ساختار به AI بدون کل HTML |
-| `نردبان مهندس نرم_افزار بیت_پین.md` | نردبان مهندسی بیت‌پین (L1 تا L8) که موضوعات بر اساس آن برچسب خورده‌اند |
+| `roadmaps/backend/` | نقشه راه اصلی: مهندس بک‌اند ارشد (Python، Django، SRE، سیستم‌های توزیع‌شده) |
+| `roadmaps/database/` | نقشه راه دیتابیس (SQL، NoSQL، Indexing، Sharding و کاتالوگ دیتابیس‌ها) |
+| `roadmaps/networking/` | نقشه راه شبکه (DNS، TLS، Routing، Proxy، VPN، شبکه در لینوکس) |
+| `roadmaps/bitpin-engineering-ladder.md` | نردبان مهندسی بیت‌پین (L1 تا L8)، مشترک بین همهٔ نقشه‌های راه |
+
+برای افزودن نقشه راه جدید، پوشهٔ `roadmaps/<موضوع>/` را با `roadmap.html` و `roadmap-index.md` خودش بسازید. یک کلید `localStorage` جداگانه و نام فایل اکسپورتی که `progress` داشته باشد و به `.json` ختم شود به آن بدهید تا `.gitignore` خودبه‌خود پوشش دهد.
 
 ### شروع کار
 
-۱. یکی از فایل‌های HTML را در مرورگر باز کنید (دابل‌کلیک یا `xdg-open roadmap.html`). همه‌چیز آفلاین کار می‌کند به‌جز لینک منابع خارجی.
+۱. یکی از فایل‌های HTML را در مرورگر باز کنید (دابل‌کلیک یا `xdg-open roadmaps/backend/roadmap.html`). همه‌چیز آفلاین کار می‌کند به‌جز لینک منابع خارجی.
 ۲. از **داشبورد** شروع کنید. آمار کلی، موضوع پیشنهادی بعدی (اولین موضوع ناتمامی که همهٔ پیش‌نیازهایش تمام شده)، بوکمارک‌ها، مرورهای سررسیدشده و تحلیل شکاف حوزه‌های کلیدی را نشان می‌دهد.
 ۳. با **فازها** موضوعات را مرور کنید و روی هر کارت کلیک کنید تا باز شود.
 
@@ -232,7 +260,7 @@ How **Merge** behaves per roadmap:
 
 - کلیدهای داخل `progress` شناسهٔ موضوعات هستند (ستون `id` در فایل‌های نمایه). موارد آزمون نهایی با کلید `capstone_<بخش>_<شماره>` ذخیره می‌شوند (در نقشه راه شبکه `netcapstone_…`).
 - اکسپورت شبکه فیلد `"kind": "network-roadmap"` هم دارد. اکسپورت دیتابیس فیلد `"app": "database-roadmap"` و یک `summary` (`done`، `total`، `pct`) دارد.
-- الگوهای `roadmap-progress*.json`، `network-roadmap-progress*.json` و `db-roadmap-progress*.json` در `.gitignore` هستند. می‌توانید فایل‌های اکسپورت را در پوشهٔ مخزن نگه دارید و commit نمی‌شوند.
+- `.gitignore` همهٔ فایل‌های `*progress*.json` را در هر پوشه‌ای نادیده می‌گیرد. هم فایل‌هایی که اکسپورت می‌کنید و هم فایل‌هایی که ایمپورت می‌کنید پوشش داده می‌شوند. می‌توانید آن‌ها را هر جای مخزن نگه دارید و commit نمی‌شوند.
 
 ### ایمپورت
 
