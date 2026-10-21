@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نقشه‌های راه مهندسی | Engineering Roadmaps</title>
+<style>
+:root{
+  --bg:#0f1420; --bg2:#161d2e; --card:#1b2436; --card2:#212c42; --border:#2a3650;
+  --text:#e7ecf7; --muted:#9fb0cc; --accent:#5b8cff; --accent2:#8b6bff; --good:#3ecf8e;
+  --warn:#f5b942; --bad:#ef5a6f; --chip:#26314a; --shadow:0 8px 24px rgba(0,0,0,.35);
+  --radius:16px;
+}
+[data-theme="light"]{
+  --bg:#f4f6fb; --bg2:#ffffff; --card:#ffffff; --card2:#f0f3fa; --border:#dde3f0;
+  --text:#1a2230; --muted:#5b6b85; --accent:#3563e9; --accent2:#7c4dff; --good:#0f9d63;
+  --warn:#b5790a; --bad:#d43a4f; --chip:#eef1fa; --shadow:0 8px 20px rgba(30,40,70,.08);
+}
+*{box-sizing:border-box;}
+body{margin:0;font-family:'Vazirmatn','Tahoma',sans-serif;background:var(--bg);color:var(--text);transition:background .2s,color .2s;line-height:1.7;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:1100px;margin:0 auto;padding:28px 20px 48px;}
+
+/* header */
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:34px;}
+.brand{display:flex;align-items:center;gap:12px;}
+.logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-size:20px;flex:none;}
+.brand b{display:block;font-size:15px;}
+.brand span{font-size:12px;color:var(--muted);}
+.iconbtn{width:38px;height:38px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text);cursor:pointer;font-size:16px;flex:none;}
+
+.hero{margin-bottom:30px;}
+.hero h1{font-size:clamp(24px,4vw,34px);margin:0 0 8px;line-height:1.4;}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.hero p{margin:0;color:var(--muted);font-size:14.5px;max-width:680px;}
+
+/* roadmap cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px;}
+.card{position:relative;display:flex;flex-direction:column;gap:12px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:22px 20px 18px;box-shadow:var(--shadow);transition:transform .15s,border-color .15s;overflow:hidden;}
+.card::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:var(--c1);}
+.card:hover{transform:translateY(-3px);border-color:var(--c1);}
+.card:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.card .icon{width:48px;height:48px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:24px;background:color-mix(in srgb,var(--c1) 16%,transparent);}
+.card h2{margin:0;font-size:18px;}
+.card h2 small{display:block;font-size:12px;font-weight:400;color:var(--muted);direction:ltr;text-align:right;}
+.card p{margin:0;font-size:13px;color:var(--muted);}
+.chips{display:flex;flex-wrap:wrap;gap:6px;direction:ltr;justify-content:flex-end;}
+.chip{font-size:11px;padding:3px 9px;border-radius:999px;background:var(--chip);color:var(--muted);}
+.progress{margin-top:auto;padding-top:12px;border-top:1px dashed var(--border);font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px;}
+.progress b{color:var(--text);}
+.progress .done b{color:var(--good);}
+.progress .due b{color:var(--warn);}
+.cta{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:700;color:var(--c1);}
+.cta .path{font-weight:400;font-size:11px;color:var(--muted);direction:ltr;font-family:'Consolas','Menlo',monospace;}
+
+.backend{--c1:var(--accent);}
+.database{--c1:var(--good);}
+.networking{--c1:var(--accent2);}
+
+/* secondary */
+.section-title{font-size:15px;font-weight:800;margin:38px 0 14px;display:flex;align-items:center;gap:10px;}
+.section-title .line{flex:1;height:1px;background:var(--border);}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;}
+.link{display:flex;gap:12px;align-items:flex-start;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:14px 16px;transition:border-color .15s;}
+.link:hover{border-color:var(--accent);}
+.link .e{font-size:20px;line-height:1.4;}
+.link b{display:block;font-size:13.5px;}
+.link span{font-size:12px;color:var(--muted);}
+
+.tip{margin-top:26px;background:var(--card2);border:1px solid var(--border);border-right:4px solid var(--warn);border-radius:12px;padding:14px 16px;font-size:13px;color:var(--muted);}
+.tip b{color:var(--text);}
+footer{margin-top:30px;text-align:center;font-size:11.5px;color:var(--muted);}
+
+@media (max-width:520px){
+  .wrap{padding:20px 16px 36px;}
+  .top{margin-bottom:24px;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;}
+  .card:hover{transform:none;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand">
+      <div class="logo">R</div>
+      <div><b>نقشه‌های راه مهندسی</b><span>Engineering Roadmaps</span></div>
+    </div>
+    <button class="iconbtn" onclick="toggleTheme()" title="تغییر تم" aria-label="تغییر تم">🌓</button>
+  </header>
+
+  <section class="hero">
+    <h1>از کجا <em>شروع</em> کنیم؟</h1>
+    <p>سه نقشه راه خودخوان برای رشد به‌عنوان مهندس بک‌اند. هر کدام را جداگانه باز کنید؛ پیشرفت هر نقشه راه مستقل از بقیه در همین مرورگر ذخیره می‌شود.</p>
+  </section>
+
+  <main class="grid" id="roadmaps"></main>
+
+  <div class="section-title">مستندات و مرجع <div class="line"></div></div>
+  <div class="links">
+    <a class="link" href="roadmaps/bitpin-engineering-ladder.md">
+      <div class="e">🪜</div>
+      <div><b>نردبان مهندسی بیت‌پین</b><span>تعریف سطوح L1 تا L8 که برچسب «Ln+» هر موضوع بر اساس آن است</span></div>
+    </a>
+    <a class="link" href="README.md">
+      <div class="e">📘</div>
+      <div><b>راهنمای استفاده (README)</b><span>نماها، مرور دوره‌ای و سازوکار اکسپورت/ایمپورت پیشرفت — فارسی و انگلیسی</span></div>
+    </a>
+  </div>
+
+  <div class="tip">💾 <b>پیشرفت فقط در همین مرورگر ذخیره می‌شود.</b> برای پشتیبان‌گیری یا انتقال به سیستم دیگر، داخل هر نقشه راه از دکمهٔ «⬇️ اکسپورت فایل پیشرفت» استفاده کنید و بعداً با «⬆️ ایمپورت» برگردانید.</div>
+
+  <footer>Engineering Roadmaps · Backend · Database · Networking</footer>
+</div>
+
+<script>
+// Each roadmap keeps its own progress under its own localStorage key (see README).
+const ROADMAPS = [
+  {
+    id: 'backend', href: 'roadmaps/backend/roadmap.html', icon: '🧠',
+    title: 'نقشه راه مهندس بک‌اند ارشد', en: 'Senior Backend Engineer',
+    desc: 'از معماری کامپیوتر و سیستم‌عامل تا پایتون، جنگو، دیتابیس، سیستم‌های توزیع‌شده، DevOps و SRE — نقشه راه اصلی.',
+    tags: ['Python', 'Django', 'SRE', 'Distributed Systems', 'Kubernetes'],
+    storageKey: 'roadmap_progress_v1', capstonePrefix: 'capstone_',
+  },
+  {
+    id: 'database', href: 'roadmaps/database/roadmap.html', icon: '🗄️',
+    title: 'نقشه راه دیتابیس', en: 'Databases',
+    desc: 'از مبانی DBMS و SQL تا ایندکس، تراکنش، Replication و Sharding، به‌همراه کاتالوگ خانواده‌ها و پروفایل دیتابیس‌ها.',
+    tags: ['SQL', 'PostgreSQL', 'NoSQL', 'Indexing', 'Sharding'],
+    storageKey: 'db_roadmap_progress_v1', capstonePrefix: 'capstone_',
+  },
+  {
+    id: 'networking', href: 'roadmaps/networking/roadmap.html', icon: '🌐',
+    title: 'نقشه راه شبکه', en: 'Networking',
+    desc: 'از مدل‌های لایه‌ای و TCP/IP تا DNS، TLS، مسیریابی، Proxy، VPN و عیب‌یابی شبکه در لینوکس.',
+    tags: ['TCP/IP', 'DNS', 'TLS', 'Routing', 'VPN'],
+    storageKey: 'network_roadmap_progress_v1', capstonePrefix: 'netcapstone_',
+  },
+];
+
+function loadTheme() {
+  let t = 'dark';
+  try { t = localStorage.getItem('roadmap_theme') || 'dark'; } catch (e) {}
+  document.documentElement.setAttribute('data-theme', t);
+}
+function toggleTheme() {
+  const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  try { localStorage.setItem('roadmap_theme', next); } catch (e) {}
+}
+
+function readStats(r) {
+  let progress;
+  try { progress = JSON.parse(localStorage.getItem(r.storageKey) || 'null'); } catch (e) { return null; }
+  if (!progress || typeof progress !== 'object') return null;
+  const now = new Date();
+  const s = {done: 0, active: 0, due: 0};
+  Object.entries(progress).forEach(([id, e]) => {
+    if (!e || id.startsWith(r.capstonePrefix)) return;
+    if (e.status === 'completed' || e.status === 'mastered') s.done++;
+    else if (e.status === 'learning' || e.status === 'practicing') s.active++;
+    if (e.review && e.review.nextDate && new Date(e.review.nextDate) <= now) s.due++;
+  });
+  return (s.done || s.active || s.due) ? s : null;
+}
+
+function fa(n) { return n.toLocaleString('fa-IR'); }
+
+function render() {
+  document.getElementById('roadmaps').innerHTML = ROADMAPS.map(r => {
+    const s = readStats(r);
+    const progress = s
+      ? `<span class="done">✓ <b>${fa(s.done)}</b> تکمیل‌شده</span>
+         <span>⏳ <b>${fa(s.active)}</b> در حال یادگیری</span>
+         ${s.due ? `<span class="due">🔁 <b>${fa(s.due)}</b> مرور امروز</span>` : ''}`
+      : `<span>هنوز پیشرفتی در این مرورگر ثبت نشده</span>`;
+    return `<a class="card ${r.id}" href="${r.href}">
+      <div class="icon">${r.icon}</div>
+      <h2>${r.title}<small>${r.en}</small></h2>
+      <p>${r.desc}</p>
+      <div class="chips">${r.tags.map(t => `<span class="chip">${t}</span>`).join('')}</div>
+      <div class="progress">${progress}</div>
+      <div class="cta"><span>ورود به نقشه راه ←</span><span class="path">${r.href.replace('roadmaps/', '')}</span></div>
+    </a>`;
+  }).join('');
+}
+
+loadTheme();
+render();
+// Refresh counts when coming back from a roadmap tab.
+window.addEventListener('focus', render);
+window.addEventListener('pageshow', render);
+</script>
+</body>
+</html>

@@ -109,11 +109,14 @@ table th{background:var(--card2);color:var(--accent);font-size:12px;}
 .chipbar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
 .review-item{display:flex;justify-content:space-between;align-items:center;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 14px;margin-bottom:8px;font-size:12.5px;}
 @media(max-width:900px){.app{grid-template-columns:1fr;} .sidebar{position:relative;height:auto;}}
+.homelink{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);padding:5px 10px;margin-bottom:12px;border-radius:8px;border:1px solid var(--border);background:var(--card);}
+.homelink:hover{color:var(--accent);border-color:var(--accent);}
 </style>
 </head>
 <body>
 <div class="app">
   <aside class="sidebar">
+    <a class="homelink" href="../../index.html" title="بازگشت به صفحهٔ اصلی همهٔ نقشه‌های راه">→ همهٔ نقشه‌های راه</a>
     <div class="brand">
       <div class="logo">SE</div>
       <div><h1>نقشه راه بک‌اند ارشد</h1><p>Python · Django · SRE · Distributed Systems</p></div>

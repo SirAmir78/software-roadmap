@@ -12,6 +12,7 @@ Self-paced learning roadmaps for backend engineers. Each roadmap is a single, se
 
 ```text
 .
+├── index.html                                # start page: links to every roadmap
 ├── README.md
 ├── .gitignore
 └── roadmaps/
@@ -38,11 +39,11 @@ Every roadmap folder has the same two files:
 | `roadmaps/database/` | Database roadmap (SQL, NoSQL, indexing, sharding, plus a catalog of databases) |
 | `roadmaps/networking/` | Network roadmap (DNS, TLS, routing, proxy, VPN, Linux networking) |
 
-To add a new roadmap, create `roadmaps/<topic>/` with its own `roadmap.html` and `roadmap-index.md`. Give it its own `localStorage` key and an export file name that contains `progress` and ends in `.json`, so `.gitignore` already covers it.
+To add a new roadmap, create `roadmaps/<topic>/` with its own `roadmap.html` and `roadmap-index.md`. Give it its own `localStorage` key and an export file name that contains `progress` and ends in `.json`, so `.gitignore` already covers it. Then add an entry for it to the `ROADMAPS` list in `index.html`, and put the same `homelink` (pointing to `../../index.html`) at the top of its sidebar.
 
 ### Getting started
 
-1. Open one of the HTML files in a browser (double-click it, or `xdg-open roadmaps/backend/roadmap.html`). Everything works offline except the external resource links.
+1. Open `index.html` in the repo root in a browser (double-click it, or `xdg-open index.html`). It links to every roadmap and shows how many topics you've done, are learning, and have due for review in each. You can also open any `roadmaps/*/roadmap.html` directly. Each roadmap has a **→ همهٔ نقشه‌های راه** (*all roadmaps*) link at the top of its sidebar that brings you back to this page. Everything works offline except the external resource links.
 2. Start at **Dashboard**. It shows your overall stats, the suggested next topic (the first unfinished topic whose prerequisites are all done), your bookmarks, topics due for review, and a gap analysis for key domains.
 3. Use **Phases** to browse topics. Click a card to open the topic.
 
@@ -160,7 +161,7 @@ How **Merge** behaves per roadmap:
 
 ### ساختار مخزن
 
-همهٔ نقشه‌های راه داخل پوشهٔ `roadmaps/` هستند و هر نقشه راه زیرپوشهٔ خودش را دارد (درخت کامل پوشه‌ها در بخش انگلیسی آمده است). هر زیرپوشه دو فایل یکسان دارد:
+صفحهٔ شروع `index.html` در ریشهٔ مخزن است. همهٔ نقشه‌های راه داخل پوشهٔ `roadmaps/` هستند و هر نقشه راه زیرپوشهٔ خودش را دارد (درخت کامل پوشه‌ها در بخش انگلیسی آمده است). هر زیرپوشه دو فایل یکسان دارد:
 
 - `roadmap.html` خود نقشه راه است. آن را در مرورگر باز کنید.
 - `roadmap-index.md` نمایهٔ فشردهٔ همان نقشه راه است (شناسه، عنوان، سطح، نردبان L). برای مرور سریع یا دادن ساختار به AI بدون کل HTML مناسب است.
@@ -172,11 +173,11 @@ How **Merge** behaves per roadmap:
 | `roadmaps/networking/` | نقشه راه شبکه (DNS، TLS، Routing، Proxy، VPN، شبکه در لینوکس) |
 | `roadmaps/bitpin-engineering-ladder.md` | نردبان مهندسی بیت‌پین (L1 تا L8)، مشترک بین همهٔ نقشه‌های راه |
 
-برای افزودن نقشه راه جدید، پوشهٔ `roadmaps/<موضوع>/` را با `roadmap.html` و `roadmap-index.md` خودش بسازید. یک کلید `localStorage` جداگانه و نام فایل اکسپورتی که `progress` داشته باشد و به `.json` ختم شود به آن بدهید تا `.gitignore` خودبه‌خود پوشش دهد.
+برای افزودن نقشه راه جدید، پوشهٔ `roadmaps/<موضوع>/` را با `roadmap.html` و `roadmap-index.md` خودش بسازید. یک کلید `localStorage` جداگانه و نام فایل اکسپورتی که `progress` داشته باشد و به `.json` ختم شود به آن بدهید تا `.gitignore` خودبه‌خود پوشش دهد. سپس یک مورد برای آن به فهرست `ROADMAPS` در `index.html` اضافه کنید و همان لینک `homelink` (به `../../index.html`) را بالای نوار کناری آن بگذارید.
 
 ### شروع کار
 
-۱. یکی از فایل‌های HTML را در مرورگر باز کنید (دابل‌کلیک یا `xdg-open roadmaps/backend/roadmap.html`). همه‌چیز آفلاین کار می‌کند به‌جز لینک منابع خارجی.
+۱. فایل `index.html` در ریشهٔ مخزن را در مرورگر باز کنید (دابل‌کلیک یا `xdg-open index.html`). این صفحه به همهٔ نقشه‌های راه لینک دارد و برای هر کدام تعداد موضوعات تکمیل‌شده، در حال یادگیری و نیازمند مرور را نشان می‌دهد. می‌توانید هر `roadmaps/*/roadmap.html` را هم مستقیم باز کنید. بالای نوار کناری هر نقشه راه لینک **→ همهٔ نقشه‌های راه** هست که شما را به همین صفحه برمی‌گرداند. همه‌چیز آفلاین کار می‌کند به‌جز لینک منابع خارجی.
 ۲. از **داشبورد** شروع کنید. آمار کلی، موضوع پیشنهادی بعدی (اولین موضوع ناتمامی که همهٔ پیش‌نیازهایش تمام شده)، بوکمارک‌ها، مرورهای سررسیدشده و تحلیل شکاف حوزه‌های کلیدی را نشان می‌دهد.
 ۳. با **فازها** موضوعات را مرور کنید و روی هر کارت کلیک کنید تا باز شود.
 
